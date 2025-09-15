@@ -1,6 +1,9 @@
 README — Proyecto Kedro: Tendencias en la Industria del Gaming
 Descripción del Proyecto
 
+Video Explicativo:
+https://drive.google.com/file/d/1Ve77Tgy7ZtvgMHceRnu_3xNI784bnAxa/view?usp=sharing
+
 Este proyecto analiza las tendencias económicas en la industria de los videojuegos entre 2010 y 2024. Utilizando estadísticas descriptivas y visualizaciones, se identifican patrones de ingresos diarios, mensuales y anuales, con el objetivo de comprender la evolución del sector y anticipar escenarios futuros.
 Objetivo
 
@@ -40,5 +43,6 @@ Duoc UC, 2025.
 Bárbara Álveal
 Estudiante de igeniería, desarrolladora Frontend y diseñadora de entornos.
 Duoc UC, 2025.
+
 
 Proyecto realizado para el curso de Machine Learning.
