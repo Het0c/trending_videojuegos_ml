@@ -4,10 +4,25 @@
 # Link: https://docs.kedro.org/en/stable/data/data_catalog.html
 datos_crudos:
   type: pandas.CSVDataset
-  filepath: data/01_raw/gaming.csv
-
-
-
+  filepath: data/01_raw/gaming_data.csv
+   
+datos_intermedios:
+    type: pandas.ParquetDataset
+    filepath: data/02_intermediate/processed.parquet
+   
 datos_limpios:
-  type: pandas.CSVDataset
-  filepath: data/02_intermediate/datos_limpios.csv
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/clean.parquet
+   
+features:
+    type: pandas.ParquetDataset
+    filepath: data/04_feature/features.parquet
+    versioned: true
+   
+model_input:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/model_ready.parquet
+   
+  trained_model:
+     type: pickle.PickleDataset
+     filepath: data/06_models/model.pkl

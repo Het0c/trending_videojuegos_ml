@@ -1,0 +1,16 @@
+data_processing:
+  missing_value_strategy:
+  numerical: median
+  categorical: mode
+  outlier_threshold: 99  # percentil
+   
+feature_engineering:
+  date_components: [year, month, day_of_week]
+  derived_features:
+    - Purchases_per_user
+    - Engagement
+    - Social_Impact
+   
+model:
+  test_size: 0.2
+  random_state: 42

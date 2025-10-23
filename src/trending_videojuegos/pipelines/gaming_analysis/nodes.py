@@ -1,5 +1,8 @@
 import pandas as pd
-
+import logging
+   
+logger = logging.getLogger(__name__)
+  
 def cargar_datos():
     df = pd.read_csv("data/01_raw/gaming.csv", parse_dates=["Date"])
     return df
@@ -16,6 +19,9 @@ def calcular_estadisticas(df):
 
 
 def transformar_datos(df: pd.DataFrame) -> pd.DataFrame:
+    logger.info("Iniciando transformación de datos")
+    logger.info(f"Shape inicial: {df.shape}")
+
     # Convertir fecha
     df["Date"] = pd.to_datetime(df["Date"])
     df["Year"] = df["Date"].dt.year
@@ -38,5 +44,8 @@ def transformar_datos(df: pd.DataFrame) -> pd.DataFrame:
     ]
     columnas_finales = columnas_principales + [col for col in df.columns if col not in columnas_principales]
     df = df[columnas_finales]
+
+    logger.info(f"Shape final: {df.shape}")
+    logger.info("Transformación completada")
 
     return df

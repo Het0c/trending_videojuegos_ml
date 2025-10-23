@@ -15,7 +15,7 @@ def register_pipelines() -> dict[str, Pipeline]:
     pipelines["__default__"] = sum(pipelines.values())
     return pipelines
 
-from trenging_videojuegos.pipelines.gaming_analysis import pipeline as gaming_pipeline
+from trending_videojuegos.pipelines.gaming_analysis import pipeline as gaming_pipeline
 
 def register_pipelines():
     return {

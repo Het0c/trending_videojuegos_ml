@@ -4,17 +4,17 @@ build-backend = "setuptools.build_meta"
 
 [project]
 requires-python = ">=3.9"
-name = "trenging_videojuegos"
+name = "trending_videojuegos"
 readme = "README.md"
 dynamic = [ "version",]
 dependencies = [ "ipython>=8.10", "jupyterlab>=3.0", "notebook", "kedro~=1.0.0",]
 
 [project.scripts]
-trenging-videojuegos = "trenging_videojuegos.__main__:main"
+trending-videojuegos = "trending_videojuegos.__main__:main"
 
 [tool.kedro]
-package_name = "trenging_videojuegos"
-project_name = "trenging_videojuegos"
+package_name = "trending_videojuegos"
+project_name = "trending_videojuegos"
 kedro_init_version = "1.0.0"
 tools = "['Data Structure']"
 example_pipeline = "False"
@@ -23,7 +23,7 @@ source_dir = "src"
 [project.entry-points."kedro.hooks"]
 
 [tool.setuptools.dynamic.version]
-attr = "trenging_videojuegos.__version__"
+attr = "trending_videojuegos.__version__"
 
 [tool.setuptools.packages.find]
 where = [ "src",]
@@ -31,3 +31,10 @@ namespaces = false
 
 [tool.kedro_telemetry]
 project_id = "eb3e67cfc7c844e6930bbf5bad670020"
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "I"]
+   
+[tool.pytest.ini_options]
+testpaths = ["tests"]
